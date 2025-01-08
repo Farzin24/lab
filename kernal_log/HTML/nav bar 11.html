@@ -1,0 +1,124 @@
+
+<html>
+<head>
+   
+    <title>MEA Engineering College</title>
+    <style>
+       
+        body, h1, h2, p {
+            margin: 0;
+            padding: 0;
+        }
+
+       
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+        }
+
+        
+        .sidebar {
+            width: 200px;
+            background-color: #2b7a2b;
+            color: white;
+            padding-top: 20px;
+            height: 100vh;
+            position: fixed;
+        }
+
+        .sidebar a {
+            display: block;
+            color: white;
+            padding: 10px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .sidebar a:hover {
+            background-color: #1f5e1f;
+        }
+
+        
+        .content {
+            margin-left: 220px;
+            padding: 20px;
+            width: 100%;
+        }
+
+        h1, h2 {
+            margin-bottom: 10px;
+        }
+
+        section {
+            display: none; 
+            margin-bottom: 30px;
+        }
+
+        section.active {
+            display: block; 
+        }
+
+    </style>
+</head>
+<body>
+
+    
+    <div class="sidebar">
+        <h2>Menu</h2>
+        <a href="#" onclick="showSection('about')">About Us</a>
+        <a href="#" onclick="showSection('departments')">Departments</a>
+        <a href="#" onclick="showSection('vision')">Vision & Mission</a>
+        <a href="#" onclick="showSection('contact')">Contact Us</a>
+    </div>
+
+  
+    <div class="content">
+      
+        <section id="about">
+            <h1>About MEA Engineering College</h1>
+            <p>MEA Engineering College, established by the Muslim Educational Association (MEA), is a prominent institution offering quality engineering education. The college aims to provide state-of-the-art facilities and a supportive environment for students to excel academically and professionally.</p>
+        </section>
+
+        
+        <section id="departments">
+            <h2>Departments</h2>
+            <p>MEA Engineering College offers various departments like Computer Science, Civil Engineering, and Electronics, among others. Each department is designed to offer the best possible education and support to its students.</p>
+        </section>
+
+        
+        <section id="vision">
+            <h2>Vision & Mission</h2>
+            <p><strong>Vision:</strong> To be a center of excellence in engineering education and research.</p>
+            <p><strong>Mission:</strong> To foster technical skills and ethical values in students, preparing them to contribute positively to society.</p>
+        </section>
+
+        
+        <section id="contact">
+            <h2>Contact Us</h2>
+            <p>For more information, feel free to reach us at:</p>
+            <p>Email: <a href="mailto:info@meaengg.edu">info@meaengg.edu</a></p>
+            <p>Phone: +91-1234-567890</p>
+        </section>
+    </div>
+
+    
+    <script>
+        
+        function showSection(sectionId) {
+            
+            var sections = document.querySelectorAll('section');
+            sections.forEach(function(section) {
+                section.classList.remove('active');
+            });
+
+            
+            document.getElementById(sectionId).classList.add('active');
+        }
+
+       
+        document.getElementById('about').classList.add('active');
+    </script>
+
+</body>
+</html>
+
