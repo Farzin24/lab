@@ -166,3 +166,73 @@
 </body>
 </html>
 
+
+--------------------------------------------------
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function formvalidate() {
+            var name = document.getElementById("name").value;
+            var lname = document.getElementById("lname").value;
+            var mobile = document.getElementById("mobile").value;
+            var email = document.getElementById("email").value;
+            var errorMessage = "";
+
+            // Name validation
+            var nameRegex = /^[A-Za-z\s]+$/;
+            if (!name || !nameRegex.test(name)) {
+                errorMessage += "Enter a valid first name.\n";
+            }
+
+            // Last name validation
+            if (!lname || !nameRegex.test(lname)) {
+                errorMessage += "Enter a valid last name.\n";
+            }
+
+            // Mobile number validation
+            var mobileRegex = /^[0-9]{10}$/;
+            if (!mobile || !mobileRegex.test(mobile)) {
+                errorMessage += "Enter a valid 10-digit mobile number.\n";
+            }
+
+            // Email validation
+            var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!email || !emailRegex.test(email)) {
+                errorMessage += "Enter a valid email address.\n";
+            }
+
+            // Display errors or success message
+            if (errorMessage) {
+                alert(errorMessage);
+                return false; // Prevent form submission
+            }
+
+            alert("Form submitted successfully!");
+            return true; // Allow form submission
+        }
+    </script>
+</head>
+<body>
+    <h1>Registration Form</h1>
+    <form onsubmit="return formvalidate()">
+        <label for="name">First Name:</label>
+        <input type="text" id="name" name="name"><br><br>
+
+        <label for="lname">Last Name:</label>
+        <input type="text" id="lname" name="lname"><br><br>
+
+        <label for="mobile">Mobile Number:</label>
+        <input type="text" id="mobile" name="mobile"><br><br>
+
+        <label for="email">Email:</label>
+        <input type="text" id="email" name="email"><br><br>
+
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
