@@ -78,3 +78,45 @@
 
 </body>
 </html>
+
+
+
+
+<html>
+<head>
+    <title>JavaScript String and Math Functions</title>
+</head>
+<body>
+    <h1>String and Math Functions Example</h1>
+
+    <h2>String Functions</h2>
+    <p id="string"></p>
+
+    <h2>Math Functions</h2>
+    <p id="math"></p>
+
+    <script>
+        // String Functions Example
+        let str = " Hello, World! ";
+        let results = `
+            Original String: '${str}'
+            Trimmed: '${str.trim()}'
+            Replaced 'World' with 'JavaScript': '${str.replace("World", "JavaScript")}'
+            Contains 'World': ${str.includes("World")}
+            Lowercase: '${str.toLowerCase()}'
+            Substring (0-5): '${str.substring(0, 5)}'
+        `;        document.getElementById("string").innerText = results;
+        // Math Functions Example
+        let num = 25;
+        let mathResults = `
+            Number: ${num}
+            Square Root: ${Math.sqrt(num)}
+            Random Number: ${Math.random()}
+            Rounded (9.6): ${Math.round(9.6)}
+            Max (1, 2, 3, 50, 100, 245): ${Math.max(1, 2, 3, 50, 100, 245)}
+            Min (1, 2, 3, 50, 100, 245): ${Math.min(1, 2, 3, 50, 100, 245)}
+        `;
+        document.getElementById("math").innerText = mathResults;
+    </script>
+</body>
+</html>
