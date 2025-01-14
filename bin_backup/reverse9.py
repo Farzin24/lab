@@ -8,3 +8,23 @@ def reverse_num():
    else:
        print("invalid")
 reverse_num()
+
+
+def read_num():
+    while True:
+        num=int(input("enter numbers:"))
+        if 1000<=num<=9999:
+            return num
+        else:
+            print("invalid")
+def reverse(num):
+    rev=0
+    while num>0:
+        rem=num%10
+        rev=rev*10+rem
+        num=num//10
+    return rev
+number=read_num()
+reversed=reverse(number)
+print(number)
+print(reversed)
